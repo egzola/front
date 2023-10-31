@@ -1,4 +1,4 @@
-set dt=%date:~10,4%-%date:~7,2%-%date:~4,2% %time%
+set dt=%date:~10,4%-%date:~4,2%-%date:~7,2% %time:~0,8%
 echo %dt%
 
 call npm run build
