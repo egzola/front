@@ -29,7 +29,7 @@ export default function Layout(props:any) {
             </main>
 
             <footer>
-                Desenvolvido por Eduardo Zola - 2023 / 2024
+                Desenvolvido por Eduardo Zola - 2022
             </footer>
         </div>
   );
