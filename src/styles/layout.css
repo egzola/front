@@ -1,0 +1,178 @@
+html, body {
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+   font-size:15px;
+
+   user-select: none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+}
+
+.page {
+    height: 100vh; /* for shorter content */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    /*ie10*/
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+}
+
+
+
+header {
+    flex-basis: 50px;
+
+    -ms-flex-preferred-size: 50px;  /*ie10*/
+
+    /*center align of links*/
+    display: flex;
+    align-items: center; /*vertical*/
+    justify-content: space-around; /*or space-between*/
+
+    /*ie10*/
+    display: -ms-flexbox;
+    -ms-flex-align: center; /*vertical*/
+    -ms-flex-line-pack: distribute; /*or justify*/
+
+    background-color:#222222;
+    color:white;
+    font-size:1.4em;
+    font-family: sans-serif;
+    border-bottom: 0px solid black;
+}
+
+
+
+footer{
+    flex-basis: 30px;
+
+    -ms-flex-preferred-size: 25px;  /*ie10*/
+
+    /*center align of links*/
+    display: flex;
+    align-items: center; /*vertical*/
+    justify-content: space-around; /*or space-between*/
+
+    /*ie10*/
+    display: -ms-flexbox;
+    -ms-flex-align: center; /*vertical*/
+    -ms-flex-line-pack: distribute; /*or justify*/
+
+
+    background-color: #444444;
+    border-top: 0px solid black;
+    margin-top: auto;  /*ie10 short content*/
+    color:white;
+}
+
+
+
+footer a {
+   color:white;
+}
+
+header a {
+   /*ie10*/
+   /*hack to trigger the layout for horizontal alignment distribute/justify*/
+   display: inline-block;
+}
+
+
+main {
+    overflow-y: auto;
+    background-color: #eee;
+    flex: 1;
+    display:flex;
+    flex-direction:row;
+    height:100%;
+    /*ie10*/
+    -ms-flex: 1 1 auto; /*needs both shrink and grow*/
+}
+
+
+.content {
+    min-height:100%;
+    width:100%;
+    background-color:#eeeeee;
+    color:black;
+    padding:20px;
+    overflow:auto;
+}
+
+
+/* The sidebar menu */
+.sideBar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 50px;
+  left: 0;
+  padding-left:0px;
+  padding-top:25px;
+  background-color: #111111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  overflow:hidden;
+}
+
+/* The sidebar links */
+.sideBar a {
+  padding-left: 10px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  color: #818181;
+  display: flex;
+  align-items: center; /* vertical align center */
+  xxjustify-content: center;
+  flex-wrap: nowrap;
+  transition: 0.3s;
+  text-decoration: none;
+  margin-bottom:5px;
+}
+
+.sideBar a, a:hover, a:link , a:visited, a:active { text-decoration: none; }
+
+.sideBar a:hover {
+  background-color:#6696eb;
+  color:white;
+}
+
+.sideBar .menuIcon {
+  color:white;
+  margin-right:8px;
+}
+
+
+/* The button used to open the sidebar */
+.toggleSideBar {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #222222;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+
+.toggleSideBar:hover {
+  transition: 0.3s;
+  background-color: #444;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sideBar {padding-top: 15px;}
+  .sideBar a {font-size: 18px;}
+}
